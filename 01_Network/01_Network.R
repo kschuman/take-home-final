@@ -9,33 +9,10 @@ edges <- count(edges, c('gname','country_txt'))
 nodes <- read.csv('SA_nodes.csv')[c('X0')]
 
 # Network
-simpleNetwork(edges, Source = 'gname', Target = 'country_txt', opacity=.8 )
+simpleNetwork(edges, Source = 'gname', Target = 'country_txt', opacity=.8 ) %>% 
+  htmlwidgets::prependContent(htmltools::tags$h1('Which Terrorist Groups Attach South American Countries?')) %>% 
+  networkD3::saveNetwork(file="KS_D3Network.html",  selfcontained = TRUE)
 
 
-# Sankey network
-names(nodes) <- 'name'
-names(edges) <- c('source', 'target', 'value')
 
 
-Data <- list()
-Data$links <- data.frame(edges)
-Data$nodes <- nodes
-
-sankeyNetwork(Links = Data$edges, Nodes = Data$nodes)
-
-Data
-URL <- paste0("https://cdn.rawgit.com/christophergandrud/networkD3/",
-              "master/JSONdata/energy.json")
-Energy <- jsonlite::fromJSON(URL)
-class(Energy)
-# Plot
-sankeyNetwork(Links = edges, Nodes = nodes, Source = "source",
-              Target = "target", Value = "value", NodeID = "name",
-               fontSize = 12, nodeWidth = 30)
-
-edges
-
-Data
-head(Energy)
-plot(g)
-g$links
