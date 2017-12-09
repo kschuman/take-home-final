@@ -11,8 +11,9 @@ theme_set(theme_bw())
 
 # Read data
 SA <- read.csv('south_amer.csv', header=T)
-freqs <- count(SA, c('country_txt','iyear'))
+freqs <- count(SA, c(SA$country_txt, SA$iyear))
 
+count(SA, c(country_txt, iyear))
 gplot <- ggplot(freqs, aes(x = iyear, y=freq, group=country_txt, color=country_txt)) + 
   geom_line() + labs(x = 'Year', y = '# Incidents', title='Incidents by Year and Country') +
   scale_color_discrete(name = 'Country')
