@@ -1,0 +1,32 @@
+,name,id
+0,Assassination,0
+1,Armed Assault,1
+2,Hostage Taking (Kidnapping),2
+3,Unknown,3
+4,Hijacking,4
+5,Hostage Taking (Barricade Incident),5
+6,Facility/Infrastructure Attack,6
+7,Bombing/Explosion,7
+8,Unarmed Assault,8
+9,Police,9
+10,Educational Institution,10
+11,Business,11
+12,Government (Diplomatic),12
+13,Military,13
+14,Government (General),14
+15,Airports & Aircraft,15
+16,Private Citizens & Property,16
+17,Telecommunication,17
+18,Journalists & Media,18
+19,Utilities,19
+20,Other,20
+21,NGO,21
+22,Transportation,22
+23,Religious Figures/Institutions,23
+24,Food or Water Supply,24
+25,Terrorists/Non-State Militia,25
+26,Maritime,26
+27,Unknown,27
+28,Tourists,28
+29,Abortion Related,29
+30,Violent Political Party,30

@@ -1,0 +1,2 @@
+library(plotly)
+packageVersion('plotly')
